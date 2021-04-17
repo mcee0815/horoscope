@@ -1,11 +1,15 @@
 import React, {Component} from 'react'
 
+import Sign from './components/sign';
+
+
+
 class Aztro extends Component {
     constructor(props){
         super(props);
         this.state = {
           json: {},
-          urlFrag:'gemini',
+          urlFrag:'',
           signs:['Aries','Taurus','Gemini','Cancer','Leo','Virgo','Libra','Scorpio','Sagittarius','Capricorn','Aquarius','Pisces']
         }
 
@@ -15,30 +19,36 @@ class Aztro extends Component {
     componentDidMount () {
        
     }
-    getSign(urlFrag) {
-        const url = `https://aztro.sameerkumar.website/?sign=${urlFrag}&day=today`;
+
+    getSign(query) {
+        const url = `https://aztro.sameerkumar.website/?sign=${query}&day=today`;
         fetch(url, {
             method: 'POST'
         }).then(response => response.json())
         .then(json => { 
-            console.log(json)
-            this.setState({json}); });
+            json && this.setState({json}); });
     }
 
-    handleClick(e) {
+    
+    async handleClick(e) {
         this.setState({
-            urlFrag:e.target.value
+            urlFrag:  await e.target.value
         })
-        this.getSign(this.state.urlFrag) 
+         this.getSign(this.state.urlFrag) 
     }
 
     render() {
         let signs = this.state.signs.map((sign,index) => {
-            return (<button key={index} value={sign.toLowerCase()} 
+            return (
+                <div key={index}>
+                <Sign />
+                <button  value={sign.toLowerCase()} 
         
-            onClick={(e) => {
-                this.handleClick(e)
-            }}>{sign}</button>)
+                onClick={(e) => {
+                    this.handleClick(e)
+                }}>{sign}</button>
+                </div>
+                )
         })
         return (
           <div>
