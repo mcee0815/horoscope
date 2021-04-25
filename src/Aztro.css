@@ -1,0 +1,39 @@
+.container{
+    box-sizing: border-box;
+    width: 95%;
+    padding: 10px;
+    /* display: flex; */
+    margin: 0 auto;
+    /* flex-direction: column; */
+}
+
+
+.info{
+    box-sizing: border-box;
+    display:flex;
+    padding: 10px;
+    margin:10px;
+    /* margin:auto; */
+    text-align: center;
+    width:'500px';
+    color:white;
+    background-color: darkolivegreen;
+    /* flex-wrap:wrap; */
+}
+.icon-wrap{
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(144px, 1fr));
+}
+
+.icon-set{
+    box-sizing: border-box;
+    width: 100%;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    flex-flow: row wrap;
+    
+    /* align-items: center; */
+}
+
