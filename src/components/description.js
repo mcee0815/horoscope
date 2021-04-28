@@ -12,7 +12,7 @@ const Description = (props) => {
             width:'50%',
             padding:5,
             margin:'0 auto',
-            background:'yellow',
+            background:'yellow',git,
             margin:7,
         },
 
