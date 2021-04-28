@@ -8,17 +8,16 @@
 }
 
 
-.info{
+.info-box{
     box-sizing: border-box;
     display:flex;
-    padding: 10px;
+    /* flex-direction: column; */
+    /* flex-wrap: wrap; */
+    /* padding: 5px; */
     margin:10px;
-    /* margin:auto; */
-    text-align: center;
     width:'500px';
     color:white;
     background-color: darkolivegreen;
-    /* flex-wrap:wrap; */
 }
 .icon-wrap{
     box-sizing: border-box;

@@ -1,6 +1,8 @@
 import React, {Component} from 'react'
 
 import Sign from './components/sign';
+import GeneralInfo from './components/generalInfo';
+import Description from './components/description';
 import icons from './images.js'
 import  './Aztro.css'
 
@@ -62,15 +64,18 @@ class Aztro extends Component {
         return (
           <div className='container' >
               <div className='icon-wrap'>{iconSet}</div>
-              <div className='info'>
-                Current Date: {this.state.json.current_date} <br />
-                Compatibility: {this.state.json.compatibility} <br />
-                Lucky Number: {this.state.json.lucky_number} <br />
-                Lucky Time: {this.state.json.lucky_time} <br />
-                Color: {this.state.json.color} <br />
-                Date Range: {this.state.json.date_range} <br />
-                Mood: {this.state.json.mood} <br />
-                Description: {this.state.json.description} <br />
+              
+              <div className='info-box'>
+              <GeneralInfo 
+                        compatibility={this.state.json.compatibility}
+                        luckyNumber={this.state.json.lucky_number}
+                        luckyTime={this.state.json.lucky_time}
+                        color={this.state.json.color}
+                        dateRange={this.state.json.date_range}
+                        mood={this.state.json.mood} 
+                        />
+                <Description description={this.state.json.description} />
+                
               </div>
 
               
