@@ -12,12 +12,13 @@ const Description = (props) => {
             width:'50%',
             padding:5,
             margin:'0 auto',
-            background:'yellow',git,
+            background:'#ff5023',
+            boxShadow: 'grey 0px 5px 9px 0px',
             margin:7,
         },
 
         h2:{
-            color:'black',
+            color:'white',
             marginBottom:0,
             marginTop:-5,
             fontSize:'1.8em',
@@ -26,10 +27,11 @@ const Description = (props) => {
         },
 
         p:{
-            color:'black',
+            color:'white',
             textAlign:'left',
             marginTop:5,
-            lineHeight:1.5
+            lineHeight:1.5,
+            paddingLeft:5
         }
     }
 
