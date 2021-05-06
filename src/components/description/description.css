@@ -1,0 +1,16 @@
+
+
+
+/* The animation code */
+@keyframes description {
+    from {background-color: white;}
+    to {background-color: #ff5023;}
+  }
+  
+  /* The element to apply the animation to */
+  .description-animate {
+    /* background-color: red; */
+    animation-name: description;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+  }

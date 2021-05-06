@@ -1,5 +1,5 @@
 
-
+import "./description.css"
 
 const Description = (props) => {
     
@@ -7,7 +7,6 @@ const Description = (props) => {
         div:{
             display:'flex',
             flexDirection:'column',
-            // boxShadow: 'grey 0px 5px 9px 0px',
             boxSizing:'border-box',
             width:'50%',
             padding:5,
@@ -17,7 +16,7 @@ const Description = (props) => {
             margin:7,
         },
 
-        h2:{
+        h3:{
             color:'white',
             marginBottom:0,
             marginTop:-5,
@@ -36,8 +35,8 @@ const Description = (props) => {
     }
 
     return(
-        <div style={styles.div}>
-            <h2 style={styles.h2}>Description</h2>
+        <div className='description-animate' style={styles.div}>
+            <h3 style={styles.h3}>Description</h3>
             <p style={styles.p}> {props.description}</p>
         </div>
     )

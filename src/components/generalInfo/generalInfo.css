@@ -1,0 +1,16 @@
+
+
+
+/* The animation code */
+@keyframes general {
+    from {background: white;}
+    to {background: #51a0ff;}
+  }
+  
+  /* The element to apply the animation to */
+  .general-animate {
+    /* background-color: red; */
+    animation-name: general;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+  }
