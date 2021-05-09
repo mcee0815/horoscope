@@ -35,7 +35,7 @@ let styles = {
 
 const MyLoader = () => {
     return(
-        <div style={styles}>{<ReactLoading type="spinningBubbles" color="#f5670f"   />}</div>
+        <div style={styles}>{<ReactLoading type="spinningBubbles" color="#f5670f" height="150px" width="150px"   />}</div>
     )
 }
 

@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 
-import ReactLoading from "react-loading"
+// import ReactLoading from "react-loading"
 
 
 import Sign from './components/sign';
@@ -9,6 +9,8 @@ import Description from './components/description/description';
 import MyLoader from './components/loader/loader';
 import icons from './images.js'
 import  './Aztro.css'
+// import MyHook from './components/hooks/myHook';
+// import UserLogin from './components/hooks/userLogin';
 
 class Aztro extends Component {
     constructor(props){
@@ -67,10 +69,10 @@ class Aztro extends Component {
                 return (
                 <div>
                     <Sign icon={icon.icon}  name={icon.name} />
-                    <button npm audit
+                    <button
 
                         value={signValue} onClick={(e) => this.handleClick(e)}
-                        style={{width:110,margin:'10px'}}>{signValue}
+                        style={{width:110,margin:'10px'}}>Get Reading
                     </button>
                 </div>) 
             }
@@ -78,6 +80,7 @@ class Aztro extends Component {
 
         return (
           <div className='container' >
+          
           {this.state.isLoading && <MyLoader />}
               <div className='icon-wrap'>{iconSet}</div>
               
@@ -91,6 +94,7 @@ class Aztro extends Component {
                         mood={this.state.json.mood} 
                         />
                 <Description description={this.state.json.description} />
+                
                 
               </div>
 
