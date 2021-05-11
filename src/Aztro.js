@@ -11,6 +11,8 @@ import icons from './images.js'
 import  './Aztro.css'
 // import MyHook from './components/hooks/myHook';
 // import UserLogin from './components/hooks/userLogin';
+import List from './components/hooks/list'
+// import Car from './components/hooks/car'
 
 class Aztro extends Component {
     constructor(props){
@@ -67,7 +69,7 @@ class Aztro extends Component {
                 const signValue = this.state.signs[index];
                 
                 return (
-                <div>
+                <div key={index}>
                     <Sign icon={icon.icon}  name={icon.name} />
                     <button
 
@@ -80,6 +82,8 @@ class Aztro extends Component {
 
         return (
           <div className='container' >
+          
+          
           
           {this.state.isLoading && <MyLoader />}
               <div className='icon-wrap'>{iconSet}</div>

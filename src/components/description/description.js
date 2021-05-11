@@ -36,7 +36,7 @@ const Description = (props) => {
 
     return(
         <div className='description-animate' style={styles.div}>
-            <h3 style={styles.h3}>Description</h3>
+            <h3 style={styles.h3}>Details</h3>
             <p style={styles.p}> {props.description}</p>
         </div>
     )
